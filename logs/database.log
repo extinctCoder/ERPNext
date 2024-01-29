@@ -773,3 +773,5 @@ create table `tabnew dow` (
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
+2024-01-29 11:52:54,581 WARNING database DDL Query made to DB:
+RENAME TABLE `tabVehicle Manufacturer` TO `tabVehicle Manufacturer 2`
