@@ -697,3 +697,15 @@ ALTER TABLE `tabVehicle Availability` MODIFY `milage` decimal(21,9) not null def
 ALTER TABLE `tabVehicle Availability` MODIFY `cc` decimal(21,9) not null default 0, MODIFY `milage` decimal(21,9) not null default 0
 2024-01-29 11:22:22,607 WARNING database DDL Query made to DB:
 ALTER TABLE `tabVehicle Availability` MODIFY `milage` decimal(21,9) not null default 0, MODIFY `cc` decimal(21,9) not null default 0
+2024-01-29 11:23:39,246 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Availability` ADD COLUMN `ship_details` varchar(140)
+2024-01-29 11:23:39,250 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Availability` MODIFY `cc` decimal(21,9) not null default 0, MODIFY `milage` decimal(21,9) not null default 0
+2024-01-29 11:24:16,332 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Availability` MODIFY `cc` decimal(21,9) not null default 0, MODIFY `milage` decimal(21,9) not null default 0
+2024-01-29 11:24:51,856 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Availability` MODIFY `cc` decimal(21,9) not null default 0, MODIFY `milage` decimal(21,9) not null default 0
+2024-01-29 11:25:54,191 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Availability` MODIFY `cc` decimal(21,9) not null default 0, MODIFY `milage` decimal(21,9) not null default 0
+2024-01-29 11:26:02,826 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Availability` MODIFY `milage` decimal(21,9) not null default 0, MODIFY `cc` decimal(21,9) not null default 0
