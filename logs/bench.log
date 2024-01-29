@@ -43,3 +43,9 @@
 2024-01-29 01:07:30,785 INFO /home/extinctcoder/.local/bin/bench worker
 2024-01-29 01:07:30,825 INFO /home/extinctcoder/.local/bin/bench schedule
 2024-01-29 06:00:02,108 INFO /home/extinctcoder/.local/bin/bench --verbose --site all backup
+2024-01-29 11:45:18,034 INFO /home/extinctcoder/.local/bin/bench set-config -g developer_mode true
+2024-01-29 11:45:21,283 INFO /home/extinctcoder/.local/bin/bench start
+2024-01-29 11:45:21,633 INFO /home/extinctcoder/.local/bin/bench serve --port 8000
+2024-01-29 11:45:21,638 INFO /home/extinctcoder/.local/bin/bench worker
+2024-01-29 11:45:21,667 INFO /home/extinctcoder/.local/bin/bench schedule
+2024-01-29 11:45:21,695 INFO /home/extinctcoder/.local/bin/bench watch
