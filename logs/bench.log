@@ -49,3 +49,4 @@
 2024-01-29 11:45:21,638 INFO /home/extinctcoder/.local/bin/bench worker
 2024-01-29 11:45:21,667 INFO /home/extinctcoder/.local/bin/bench schedule
 2024-01-29 11:45:21,695 INFO /home/extinctcoder/.local/bin/bench watch
+2024-01-29 12:00:01,281 INFO /home/extinctcoder/.local/bin/bench --verbose --site all backup
