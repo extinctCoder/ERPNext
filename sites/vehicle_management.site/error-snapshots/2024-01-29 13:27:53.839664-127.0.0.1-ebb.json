@@ -1,0 +1,396 @@
+{
+ "etype": "TypeError",
+ "evalue": "TypeError(\"VehiclePrice.before_save() missing 1 required positional argument: 'method'\")",
+ "exception": {
+  "args": [
+   40,
+   34,
+   86,
+   101,
+   104,
+   105,
+   99,
+   108,
+   101,
+   80,
+   114,
+   105,
+   99,
+   101,
+   46,
+   98,
+   101,
+   102,
+   111,
+   114,
+   101,
+   95,
+   115,
+   97,
+   118,
+   101,
+   40,
+   41,
+   32,
+   109,
+   105,
+   115,
+   115,
+   105,
+   110,
+   103,
+   32,
+   49,
+   32,
+   114,
+   101,
+   113,
+   117,
+   105,
+   114,
+   101,
+   100,
+   32,
+   112,
+   111,
+   115,
+   105,
+   116,
+   105,
+   111,
+   110,
+   97,
+   108,
+   32,
+   97,
+   114,
+   103,
+   117,
+   109,
+   101,
+   110,
+   116,
+   58,
+   32,
+   39,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   39,
+   34,
+   44,
+   41
+  ],
+  "with_traceback": [
+   60,
+   98,
+   117,
+   105,
+   108,
+   116,
+   45,
+   105,
+   110,
+   32,
+   109,
+   101,
+   116,
+   104,
+   111,
+   100,
+   32,
+   119,
+   105,
+   116,
+   104,
+   95,
+   116,
+   114,
+   97,
+   99,
+   101,
+   98,
+   97,
+   99,
+   107,
+   32,
+   111,
+   102,
+   32,
+   84,
+   121,
+   112,
+   101,
+   69,
+   114,
+   114,
+   111,
+   114,
+   32,
+   111,
+   98,
+   106,
+   101,
+   99,
+   116,
+   62
+  ]
+ },
+ "frames": [
+  {
+   "call": "(request=<Request 'http://vehicle_management.site:8000/api/method/frappe.desk.form.save.savedocs' [POST]>)",
+   "dump": {
+    "frappe. api": "<module 'frappe.api' from '/home/extinctcoder/frappe_bench/apps/frappe/frappe/api.py'>",
+    "frappe.api. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/extinctcoder/frappe_bench/apps/frappe/frappe/__init__.py'>",
+    "response": "None"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/app.py",
+   "func": "application",
+   "lines": {
+    "93": "",
+    "94": "\t\telif request.path.startswith(\"/api/\"):",
+    "95": "\t\t\tresponse = frappe.api.handle()",
+    "96": "",
+    "97": "\t\telif request.path.startswith(\"/backups\"):"
+   },
+   "lnum": 95
+  },
+  {
+   "call": "()",
+   "dump": {
+    "frappe. handler": "<module 'frappe.handler' from '/home/extinctcoder/frappe_bench/apps/frappe/frappe/handler.py'>",
+    "frappe.handler. handle": "<function handle>",
+    "global frappe": "<module 'frappe' from '/home/extinctcoder/frappe_bench/apps/frappe/frappe/__init__.py'>"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/api.py",
+   "func": "handle",
+   "lines": {
+    "53": "\tif call == \"method\":",
+    "54": "\t\tfrappe.local.form_dict.cmd = doctype",
+    "55": "\t\treturn frappe.handler.handle()",
+    "56": "",
+    "57": "\telif call == \"resource\":"
+   },
+   "lnum": 55
+  },
+  {
+   "call": "()",
+   "dump": {
+    "cmd": "'frappe.desk.form.save.savedocs'",
+    "data": "None",
+    "global execute_cmd": "<function execute_cmd>"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/handler.py",
+   "func": "handle",
+   "lines": {
+    "45": "",
+    "46": "\tif cmd != \"login\":",
+    "47": "\t\tdata = execute_cmd(cmd)",
+    "48": "",
+    "49": "\t# data can be an empty string or list which are valid responses"
+   },
+   "lnum": 47
+  },
+  {
+   "call": "(cmd='frappe.desk.form.save.savedocs', from_async=False)",
+   "dump": {
+    "frappe. call": "<function call>",
+    "frappe. form_dict": "{'doc': '{\"name\":\"b90dbddd9b\",\"owner\":\"Administr... 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}",
+    "global frappe": "<module 'frappe' from '/home/extinctcoder/frappe_bench/apps/frappe/frappe/__init__.py'>",
+    "method": "<function savedocs>"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/handler.py",
+   "func": "execute_cmd",
+   "lines": {
+    "83": "\t\tis_valid_http_method(method)",
+    "84": "",
+    "85": "\treturn frappe.call(method, **frappe.form_dict)",
+    "86": "",
+    "87": ""
+   },
+   "lnum": 85
+  },
+  {
+   "call": "(fn=<function savedocs>, *args=(), **kwargs={'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs', 'doc': '{\"name\":\"b90dbddd9b\",\"owner\":\"Administrator\",\"cr...ync_on\":\"2024-01-29T07:27:43.372Z\",\"__unsaved\":1}'})",
+   "dump": {
+    "args": "()",
+    "fn": "<function savedocs>",
+    "newargs": "{'action': 'Save', 'doc': '{\"name\":\"b90dbddd9b\",\"owner\":\"Administrator\",\"cr...ync_on\":\"2024-01-29T07:27:43.372Z\",\"__unsaved\":1}'}"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/__init__.py",
+   "func": "call",
+   "lines": {
+    "1618": "\tnewargs = get_newargs(fn, kwargs)",
+    "1619": "",
+    "1620": "\treturn fn(*args, **newargs)",
+    "1621": "",
+    "1622": ""
+   },
+   "lnum": 1620
+  },
+  {
+   "call": "(doc=<VehiclePrice: b90dbddd9b>, action='Save')",
+   "dump": {
+    "doc": "<VehiclePrice: b90dbddd9b>",
+    "doc. save": "<bound method Document.save of <VehiclePrice: b90dbddd9b>>"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/desk/form/save.py",
+   "func": "savedocs",
+   "lines": {
+    "29": "\t}[action]",
+    "30": "",
+    "31": "\tdoc.save()",
+    "32": "",
+    "33": "\t# update recent documents"
+   },
+   "lnum": 31
+  },
+  {
+   "call": "(self=<VehiclePrice: b90dbddd9b>, *args=(), **kwargs={})",
+   "dump": {
+    "args": "()",
+    "kwargs": "{}",
+    "self": "<VehiclePrice: b90dbddd9b>",
+    "self. _save": "<bound method Document._save of <VehiclePrice: b90dbddd9b>>"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py",
+   "func": "save",
+   "lines": {
+    "307": "\tdef save(self, *args, **kwargs):",
+    "308": "\t\t\"\"\"Wrapper for _save\"\"\"",
+    "309": "\t\treturn self._save(*args, **kwargs)",
+    "310": "",
+    "311": "\tdef _save(self, ignore_permissions=None, ignore_version=None) -> \"Document\":"
+   },
+   "lnum": 309
+  },
+  {
+   "call": "(self=<VehiclePrice: b90dbddd9b>, ignore_permissions=None, ignore_version=None)",
+   "dump": {
+    "self": "<VehiclePrice: b90dbddd9b>",
+    "self. run_before_save_methods": "<bound method Document.run_before_save_methods of <VehiclePrice: b90dbddd9b>>"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py",
+   "func": "_save",
+   "lines": {
+    "342": "\t\tself.validate_higher_perm_levels()",
+    "343": "\t\tself._validate_links()",
+    "344": "\t\tself.run_before_save_methods()",
+    "345": "",
+    "346": "\t\tif self._action != \"cancel\":"
+   },
+   "lnum": 344
+  },
+  {
+   "call": "(self=<VehiclePrice: b90dbddd9b>)",
+   "dump": {
+    "self": "<VehiclePrice: b90dbddd9b>",
+    "self. run_method": "<bound method Document.run_method of <VehiclePrice: b90dbddd9b>>"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py",
+   "func": "run_before_save_methods",
+   "lines": {
+    "1050": "\t\tif self._action == \"save\":",
+    "1051": "\t\t\tself.run_method(\"validate\")",
+    "1052": "\t\t\tself.run_method(\"before_save\")",
+    "1053": "\t\telif self._action == \"submit\":",
+    "1054": "\t\t\tself.run_method(\"validate\")"
+   },
+   "lnum": 1052
+  },
+  {
+   "call": "(self=<VehiclePrice: b90dbddd9b>, method='before_save', *args=(), **kwargs={})",
+   "dump": {
+    "Document. hook": "<function Document.hook>",
+    "args": "()",
+    "fn": "<function Document.run_method.<locals>.fn>",
+    "global Document": "<class 'frappe.model.document.Document'>",
+    "kwargs": "{}",
+    "out": "undefined",
+    "self": "<VehiclePrice: b90dbddd9b>"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py",
+   "func": "run_method",
+   "lines": {
+    "913": "",
+    "914": "\t\tfn.__name__ = str(method)",
+    "915": "\t\tout = Document.hook(fn)(self, *args, **kwargs)",
+    "916": "",
+    "917": "\t\tself.run_notifications(method)"
+   },
+   "lnum": 915
+  },
+  {
+   "call": "(self=<VehiclePrice: b90dbddd9b>, *args=(), **kwargs={})",
+   "dump": {
+    "args": "()",
+    "composed": "<function Document.hook.<locals>.compose.<locals>.runner>",
+    "kwargs": "{}",
+    "method": "'before_save'",
+    "self": "<VehiclePrice: b90dbddd9b>"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py",
+   "func": "composer",
+   "lines": {
+    "1275": "",
+    "1276": "\t\t\tcomposed = compose(f, *hooks)",
+    "1277": "\t\t\treturn composed(self, method, *args, **kwargs)",
+    "1278": "",
+    "1279": "\t\treturn composer"
+   },
+   "lnum": 1277
+  },
+  {
+   "call": "(self=<VehiclePrice: b90dbddd9b>, method='before_save', *args=(), **kwargs={})",
+   "dump": {
+    "add_to_return_value": "<function Document.hook.<locals>.add_to_return_value>",
+    "args": "()",
+    "fn": "<function Document.run_method.<locals>.fn>",
+    "kwargs": "{}",
+    "self": "<VehiclePrice: b90dbddd9b>"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py",
+   "func": "runner",
+   "lines": {
+    "1257": "\t\tdef compose(fn, *hooks):",
+    "1258": "\t\t\tdef runner(self, method, *args, **kwargs):",
+    "1259": "\t\t\t\tadd_to_return_value(self, fn(self, *args, **kwargs))",
+    "1260": "\t\t\t\tfor f in hooks:",
+    "1261": "\t\t\t\t\tadd_to_return_value(self, f(self, method, *args, **kwargs))"
+   },
+   "lnum": 1259
+  },
+  {
+   "call": "(self=<VehiclePrice: b90dbddd9b>, *args=(), **kwargs={})",
+   "dump": {
+    "args": "()",
+    "kwargs": "{}",
+    "method_object": "<bound method VehiclePrice.before_save of <VehiclePrice: b90dbddd9b>>"
+   },
+   "file": "/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py",
+   "func": "fn",
+   "lines": {
+    "910": "\t\t\t# If method found in __dict__, expect it to be callable",
+    "911": "\t\t\tif method in self.__dict__ or callable(method_object):",
+    "912": "\t\t\t\treturn method_object(*args, **kwargs)",
+    "913": "",
+    "914": "\t\tfn.__name__ = str(method)"
+   },
+   "lnum": 912
+  }
+ ],
+ "locals": {
+  "args": "()",
+  "kwargs": "{}",
+  "method": "before_save",
+  "method_object": "<bound method VehiclePrice.before_save of <VehiclePrice: b90dbddd9b>>",
+  "self": "<VehiclePrice: b90dbddd9b>"
+ },
+ "pyver": "Python 3.10.12: /home/extinctcoder/frappe_bench/env/bin/python (prefix: /home/extinctcoder/frappe_bench/env)",
+ "timestamp": "2024-01-29 13:27:53.839734",
+ "traceback": "Traceback (most recent call last):\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/app.py\", line 95, in application\n    response = frappe.api.handle()\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/api.py\", line 55, in handle\n    return frappe.handler.handle()\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/handler.py\", line 47, in handle\n    data = execute_cmd(cmd)\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/handler.py\", line 85, in execute_cmd\n    return frappe.call(method, **frappe.form_dict)\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/__init__.py\", line 1620, in call\n    return fn(*args, **newargs)\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/desk/form/save.py\", line 31, in savedocs\n    doc.save()\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py\", line 309, in save\n    return self._save(*args, **kwargs)\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py\", line 344, in _save\n    self.run_before_save_methods()\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py\", line 1052, in run_before_save_methods\n    self.run_method(\"before_save\")\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py\", line 915, in run_method\n    out = Document.hook(fn)(self, *args, **kwargs)\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py\", line 1277, in composer\n    return composed(self, method, *args, **kwargs)\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py\", line 1259, in runner\n    add_to_return_value(self, fn(self, *args, **kwargs))\n  File \"/home/extinctcoder/frappe_bench/apps/frappe/frappe/model/document.py\", line 912, in fn\n    return method_object(*args, **kwargs)\nTypeError: VehiclePrice.before_save() missing 1 required positional argument: 'method'\n"
+}

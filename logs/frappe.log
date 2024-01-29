@@ -1,0 +1,3 @@
+2024-01-29 13:27:53,968 ERROR frappe New Exception collected with id: 2024-01-29 13:27:53.839664-127.0.0.1-ebb
+Site: vehicle_management.site
+Form Dict: {'doc': '{"name":"b90dbddd9b","owner":"Administrator","creation":"2024-01-29 13:20:24.987656","modified":"2024-01-29 13:20:24.987656","modified_by":"Administrator","docstatus":0,"idx":0,"posting_date":"2024-01-29","chassis_no":"SV30-0169266","vehicle_name":"Audi - A8","company_price":500,"customer_price":500,"sale_price":0,"doctype":"Vehicle Price","other_vehicle_items":[],"__last_sync_on":"2024-01-29T07:27:43.372Z","__unsaved":1}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
