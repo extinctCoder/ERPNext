@@ -1,0 +1,6 @@
+self=$$;  ( mysqldump --single-transaction --quick --lock-tables=false -u _8dbb7d67260e2d4b -p********** _8dbb7d67260e2d4b -h 127.0.0.1 -P 3306   || kill $self )  | /usr/bin/gzip >> ./vehicle_management.site/private/backups/20240129_060003-vehicle_management_site-database.sql.gz
+
+Backup Summary for vehicle_management.site at 2024-01-29 06:00:06.597032
+Config  : ./vehicle_management.site/private/backups/20240129_060003-vehicle_management_site-site_config_backup.json 94.0B
+Database: ./vehicle_management.site/private/backups/20240129_060003-vehicle_management_site-database.sql.gz         1.1MiB
+Backup for Site vehicle_management.site has been successfully completed

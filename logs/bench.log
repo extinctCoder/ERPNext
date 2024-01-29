@@ -42,3 +42,4 @@
 2024-01-29 01:07:30,760 INFO /home/extinctcoder/.local/bin/bench serve --port 8000
 2024-01-29 01:07:30,785 INFO /home/extinctcoder/.local/bin/bench worker
 2024-01-29 01:07:30,825 INFO /home/extinctcoder/.local/bin/bench schedule
+2024-01-29 06:00:02,108 INFO /home/extinctcoder/.local/bin/bench --verbose --site all backup
