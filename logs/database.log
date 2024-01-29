@@ -897,3 +897,169 @@ create table `tabVehicle Availability Series` (
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
+2024-01-29 12:14:15,879 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Availability` MODIFY `milage` decimal(21,9) not null default 0, MODIFY `cc` decimal(21,9) not null default 0
+2024-01-29 12:14:16,182 WARNING database DDL Query made to DB:
+RENAME TABLE `tabPort Location` TO `tabPort Location 2`
+2024-01-29 12:14:57,885 WARNING database DDL Query made to DB:
+create table `tabPort Location` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`location` varchar(140) unique,
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+
+			index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-01-29 12:15:22,657 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Price` MODIFY `customer_price` decimal(21,9) not null default 0, MODIFY `sale_price` decimal(21,9) not null default 0, MODIFY `company_price` decimal(21,9) not null default 0
+2024-01-29 12:15:23,012 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` MODIFY `milage` decimal(21,9) not null default 0, MODIFY `cc` decimal(21,9) not null default 0
+2024-01-29 12:15:23,349 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Availability` MODIFY `milage` decimal(21,9) not null default 0, MODIFY `cc` decimal(21,9) not null default 0
+2024-01-29 12:15:23,592 WARNING database DDL Query made to DB:
+RENAME TABLE `tabVehicle Model` TO `tabVehicle Model 2`
+2024-01-29 12:16:18,823 WARNING database DDL Query made to DB:
+create table `tabVehicle Model` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`model` varchar(140),
+`vehicle_manufacturer` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+
+			index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-01-29 12:18:31,191 WARNING database DDL Query made to DB:
+RENAME TABLE `tabVehicle Price` TO `tabVehicle Price 22`
+2024-01-29 12:18:38,059 WARNING database DDL Query made to DB:
+RENAME TABLE `tabVehicle Price 22` TO `tabVehicle Price 2`
+2024-01-29 12:20:32,066 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Price 2` MODIFY `sale_price` decimal(21,9) not null default 0, MODIFY `customer_price` decimal(21,9) not null default 0, MODIFY `company_price` decimal(21,9) not null default 0
+2024-01-29 12:20:32,461 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Availability` MODIFY `milage` decimal(21,9) not null default 0, MODIFY `cc` decimal(21,9) not null default 0
+2024-01-29 12:20:32,699 WARNING database DDL Query made to DB:
+RENAME TABLE `tabVehicle Details` TO `tabVehicle Details 2`
+2024-01-29 12:21:12,853 WARNING database DDL Query made to DB:
+create table `tabVehicle Details` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`package` varchar(140),
+`car_model` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+
+			index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-01-29 12:21:43,975 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` ADD COLUMN `model_year` varchar(140)
+2024-01-29 12:21:58,921 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` ADD COLUMN `chassis_number` varchar(140)
+2024-01-29 12:22:44,050 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` ADD COLUMN `shape` varchar(140)
+2024-01-29 12:23:12,986 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` ADD COLUMN `auction_grade` varchar(140)
+2024-01-29 12:23:38,711 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` ADD COLUMN `color` varchar(140)
+2024-01-29 12:23:52,425 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` ADD COLUMN `milage` decimal(21,9) not null default 0
+2024-01-29 12:24:48,055 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` ADD COLUMN `cc` decimal(21,9) not null default 0, ADD COLUMN `seat_capacity` int(11) not null default 0, ADD COLUMN `origin_country` varchar(140)
+2024-01-29 12:24:48,060 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` MODIFY `milage` decimal(21,9) not null default 0
+2024-01-29 12:25:23,612 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` ADD COLUMN `description` longtext
+2024-01-29 12:25:23,616 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` MODIFY `cc` decimal(21,9) not null default 0, MODIFY `milage` decimal(21,9) not null default 0
+2024-01-29 12:26:07,113 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` MODIFY `cc` decimal(21,9) not null default 0, MODIFY `milage` decimal(21,9) not null default 0, ADD UNIQUE INDEX IF NOT EXISTS chassis_number (`chassis_number`)
+2024-01-29 12:26:10,793 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` MODIFY `cc` decimal(21,9) not null default 0, MODIFY `milage` decimal(21,9) not null default 0
+2024-01-29 12:26:14,073 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Details` MODIFY `cc` decimal(21,9) not null default 0, MODIFY `milage` decimal(21,9) not null default 0
+2024-01-29 12:28:03,557 WARNING database DDL Query made to DB:
+create table `tabVehicle Price` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`posting_date` varchar(140),
+`chassis_no` varchar(140),
+`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+
+			index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-01-29 12:28:38,564 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Price` ADD COLUMN `vehicle_name` varchar(140)
+2024-01-29 12:29:36,165 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Price` ADD COLUMN `company_price` decimal(21,9) not null default 0
+2024-01-29 12:29:53,486 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Price` ADD COLUMN `customer_price` decimal(21,9) not null default 0
+2024-01-29 12:29:53,489 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Price` MODIFY `company_price` decimal(21,9) not null default 0
+2024-01-29 12:30:09,020 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Price` ADD COLUMN `sale_price` decimal(21,9) not null default 0
+2024-01-29 12:30:09,025 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Price` MODIFY `customer_price` decimal(21,9) not null default 0, MODIFY `company_price` decimal(21,9) not null default 0
+2024-01-29 12:31:19,013 WARNING database DDL Query made to DB:
+RENAME TABLE `tabVehicle Availability` TO `tabVehicle Availability 2`
+2024-01-29 12:31:58,126 WARNING database DDL Query made to DB:
+create table `tabVehicle Availability` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+
+			index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-01-29 12:32:25,142 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Availability` ADD COLUMN `posting_date` date
