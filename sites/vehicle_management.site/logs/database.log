@@ -2316,3 +2316,7 @@ create table `tabVehicle Availability Series` (
 			ROW_FORMAT=DYNAMIC
 			CHARACTER SET=utf8mb4
 			COLLATE=utf8mb4_unicode_ci
+2024-01-29 10:41:42,547 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Availability` ADD COLUMN `posting_date` date
+2024-01-29 10:43:38,890 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Availability` ADD COLUMN `chassis_no` varchar(140)
