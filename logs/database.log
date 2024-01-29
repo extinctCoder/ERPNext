@@ -749,3 +749,7 @@ ALTER TABLE `tabVehicle Price` ADD COLUMN `company_price` decimal(21,9) not null
 ALTER TABLE `tabVehicle Price` ADD COLUMN `customer_price` decimal(21,9) not null default 0
 2024-01-29 11:39:14,552 WARNING database DDL Query made to DB:
 ALTER TABLE `tabVehicle Price` MODIFY `company_price` decimal(21,9) not null default 0
+2024-01-29 11:46:23,634 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Price` ADD COLUMN `sale_price` decimal(21,9) not null default 0
+2024-01-29 11:46:23,639 WARNING database DDL Query made to DB:
+ALTER TABLE `tabVehicle Price` MODIFY `company_price` decimal(21,9) not null default 0, MODIFY `customer_price` decimal(21,9) not null default 0
